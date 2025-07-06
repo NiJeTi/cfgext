@@ -40,7 +40,7 @@ func WithFilepath(filepath string) Option {
 }
 
 func isValidStructTag(tag string) bool {
-	if len(tag) == 0 {
+	if tag == "" {
 		return false
 	}
 

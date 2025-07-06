@@ -1,3 +1,4 @@
+//nolint:errcheck,gosec,revive // tests
 package cfgext_test
 
 import (
@@ -41,11 +42,11 @@ func TestLoad(t *testing.T) {
 			cfg:   nil,
 			isErr: true,
 			setup: func() {
-				os.MkdirAll("testdata", 0755)
+				os.MkdirAll("testdata", 0o755)
 				os.WriteFile(
 					"testdata/invalid.yaml",
 					[]byte("invalid_yaml_content"),
-					0644,
+					0o644,
 				)
 			},
 		},
@@ -56,11 +57,11 @@ func TestLoad(t *testing.T) {
 			cfg:   &config{Name: "test-app", Version: "1.0.0"},
 			isErr: false,
 			setup: func() {
-				os.MkdirAll("testdata", 0755)
+				os.MkdirAll("testdata", 0o755)
 				os.WriteFile(
 					"testdata/config.yaml",
 					[]byte("name: test-app\nversion: 1.0.0"),
-					0644,
+					0o644,
 				)
 			},
 		},

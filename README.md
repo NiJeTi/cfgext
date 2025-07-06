@@ -1,5 +1,7 @@
 # cfgext
 
+[![Coverage Status](https://coveralls.io/repos/github/NiJeTi/cfgext/badge.svg)](https://coveralls.io/github/NiJeTi/cfgext)
+
 A small extension/wrapper for [koanf](https://github.com/knadh/koanf) package
 to simplify both deploy and local development.
 

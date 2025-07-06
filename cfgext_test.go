@@ -1,4 +1,4 @@
-//nolint:errcheck,gosec,revive // tests
+//nolint:errcheck,gosec // tests
 package cfgext_test
 
 import (
